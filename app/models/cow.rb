@@ -1,4 +1,6 @@
 class Cow < ActiveRecord::Base
+  has_many :orders
+
   validates :chuck_total,
             :rib_total,
             :brisket_total,
