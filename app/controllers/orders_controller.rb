@@ -20,6 +20,7 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
+        UserReserve.order_reserved(user, order).deliver
         format.html { redirect_to orders_url, notice: "Order ##{@order.id} was successfully created." }
         format.json { render :show, status: :created, location: @order }
       else
