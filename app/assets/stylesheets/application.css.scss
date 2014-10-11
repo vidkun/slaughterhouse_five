@@ -16,3 +16,11 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ body {
+  background-image: image-url('BarnSceneMedium-xrsjqq.jpg');
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+}
