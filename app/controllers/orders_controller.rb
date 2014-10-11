@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :set_cow, only: [:create, :update]
 
   def index
     @orders = Order.all
@@ -17,7 +18,6 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(order_params)
-
     respond_to do |format|
       if @order.save
         UserReserve.order_reserved(user, order).deliver
@@ -59,6 +59,10 @@ class OrdersController < ApplicationController
 
   def set_order
     @order = Order.find(params[:id])
+  end
+
+  def set_cow
+    @cow = Cow.find(@order.cow_id)
   end
 
   def order_params
