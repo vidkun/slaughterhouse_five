@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  cut: MyString
-  amount: 9.99
-  user_id: 
-  cow_id: 
+  cut: flank
+  amount: 10
+  user_id: one
+  cow_id: one
 
 two:
-  cut: MyString
-  amount: 9.99
-  user_id: 
-  cow_id: 
+  cut: flank
+  amount: 20
+  user_id: one
+  cow_id: one
