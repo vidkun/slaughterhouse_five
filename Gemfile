@@ -13,9 +13,12 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-byebug'
+end
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'pry-rails'
-  gem 'pry-byebug'
 end
