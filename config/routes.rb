@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-=======
-  root 'static_pages#home'
->>>>>>> 4188857e218c634e37a621284e2354009bc38859
-
   root to: 'static_pages#home'
   get '/about' => 'static_pages#about', as: :about
   get '/confirmation' => 'static_pages#confirmation', as: :confimation
