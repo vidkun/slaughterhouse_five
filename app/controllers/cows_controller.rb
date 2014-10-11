@@ -20,7 +20,7 @@ class CowsController < ApplicationController
 
     respond_to do |format|
       if @cow.save
-        format.html { redirect_to cows_url, notice: "Cow #{@cow.name} was successfully created." }
+        format.html { redirect_to cows_url, notice: "Cow #{@cow.tag_number} was successfully created." }
         format.json { render :show, status: :created, location: @cow }
       else
         format.html { render :new }
@@ -32,7 +32,7 @@ class CowsController < ApplicationController
   def update
     respond_to do |format|
       if @cow.update(cow_params)
-        format.html { redirect_to cows_url, notice: "Cow #{@cow.name} was successfully updated." }
+        format.html { redirect_to cows_url, notice: "Cow #{@cow.tag_number} was successfully updated." }
         format.json { render :show, status: :ok, location: @cow }
       else
         format.html { render :edit }
@@ -44,7 +44,7 @@ class CowsController < ApplicationController
   def destroy
     begin
       @cow.destroy
-      flash[:notice] = "cow #{cow.name} deleted!"
+      flash[:notice] = "cow #{cow.tag_number} deleted!"
     rescue StandardError => e
       flash[:notice] = e.message
     end
@@ -86,6 +86,8 @@ class CowsController < ApplicationController
                                 :flank_reserved,
                                 :flank_total,
                                 :tongue_reserved,
-                                :tongue_total)
+                                :tongue_total,
+                                :total_weight,
+                                :tag_number)
   end
 end
