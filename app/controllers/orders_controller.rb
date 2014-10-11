@@ -21,7 +21,7 @@ class OrdersController < ApplicationController
     @order = @cow.orders.build(order_params)
     respond_to do |format|
       if @order.save
-        # UserReserve.order_reserved(user, order).deliver
+        OrderReserve.order_reserved(@order).deliver
         format.html { redirect_to root_path, notice: "Order ##{@order.id} was successfully created." }
         format.json { render :show, status: :created, location: @order }
       else
