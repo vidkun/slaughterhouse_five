@@ -6,6 +6,8 @@ class Order < ActiveRecord::Base
   validates :amount, numericality: true
   validate :amount_left
 
+  accepts_nested_attributes_for :user
+
   private
 
   def amount_left

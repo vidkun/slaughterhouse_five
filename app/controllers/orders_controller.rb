@@ -11,6 +11,7 @@ class OrdersController < ApplicationController
 
   def new
     @order = Order.new
+    @order.user = User.new
   end
 
   def edit
@@ -69,6 +70,10 @@ class OrdersController < ApplicationController
     params.require(:order).permit(:cut,
                                   :amount,
                                   :user_id,
-                                  :cow_id)
+                                  :cow_id,
+                                  user_attributes: [:name,
+                                                    :email,
+                                                    :phone,
+                                                    :address])
   end
 end
