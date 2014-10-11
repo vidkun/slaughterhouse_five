@@ -11,11 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20141011174338) do
+=======
+ActiveRecord::Schema.define(version: 20141011162315) do
+>>>>>>> 4188857e218c634e37a621284e2354009bc38859
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "cows", force: true do |t|
     t.decimal  "chuck_reserved",          precision: 8, scale: 2
     t.decimal  "chuck_total",             precision: 8, scale: 2
@@ -63,6 +68,8 @@ ActiveRecord::Schema.define(version: 20141011174338) do
   add_index "orders", ["cow_id"], name: "index_orders_on_cow_id", using: :btree
   add_index "orders", ["user_id"], name: "index_orders_on_user_id", using: :btree
 
+=======
+>>>>>>> 4188857e218c634e37a621284e2354009bc38859
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
