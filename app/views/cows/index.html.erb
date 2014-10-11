@@ -1,0 +1,20 @@
+<h1>Cow List</h1>
+<table class='table table-hover'>
+  <thead>
+    <tr>
+      <th>Tag Number</th>
+      <th>Total Weight</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cows.each do |cow| %>
+      <tr>
+        <td><%= cow.tag_number %></td>
+        <td><%= cow.total_weight %></td>
+        <td><%= link_to 'Order', new_cow_order_path(cow), class: 'btn btn-xs btn-default' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
