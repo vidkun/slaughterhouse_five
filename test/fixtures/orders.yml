@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cut: flank
+  amount: 10
+  user_id: one
+  cow_id: one
+
+two:
+  cut: flank
+  amount: 20
+  user_id: one
+  cow_id: one
