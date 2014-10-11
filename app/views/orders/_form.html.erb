@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :cut %><br>
-    <%= f.select :cut, ['chuck', 'rib', 'brisket', 'shank', 'plate', 'short loin', 'sirloin', 'top sirloin', 'bottom sirloin', 'tenderloin', 'round', 'flank']%>
+    <%= f.select :cut, ['chuck', 'rib', 'brisket', 'shank', 'plate', ['short loin', 'short_loin'], 'sirloin', ['top sirloin', 'top_sirloin'], ['bottom sirloin', 'bottom_sirloin'], 'tenderloin', 'round', 'flank']%>
   </div>
   <div class="field">
     <%= f.label :amount %><br>
