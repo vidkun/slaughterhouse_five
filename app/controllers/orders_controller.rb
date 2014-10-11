@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
-  before_action :set_cow, only: [:create, :update]
+  before_action :set_cow, only: [:create, :update, :new]
 
   def index
     @orders = Order.all
@@ -17,7 +17,7 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = @cow.order.build(order_params)
+    @order = @cow.orders.build(order_params)
     respond_to do |format|
       if @order.save
         UserReserve.order_reserved(user, order).deliver
