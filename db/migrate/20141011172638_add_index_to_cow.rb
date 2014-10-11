@@ -1,5 +1,5 @@
 class AddIndexToCow < ActiveRecord::Migration
   def change
-    add_index :cows, :tag_number, :string, unique: true
+    add_index :cows, :tag_number, unique: true
   end
 end

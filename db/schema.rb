@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141011171446) do
+ActiveRecord::Schema.define(version: 20141011172638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,8 @@ ActiveRecord::Schema.define(version: 20141011171446) do
     t.decimal  "total_weight",            precision: 8, scale: 2
     t.string   "tag_number"
   end
+
+  add_index "cows", ["tag_number"], name: "index_cows_on_tag_number", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"
