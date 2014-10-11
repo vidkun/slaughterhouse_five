@@ -1,3 +1,10 @@
 // Place all the styles related to the cows controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.cow {
+  height: 50%;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}

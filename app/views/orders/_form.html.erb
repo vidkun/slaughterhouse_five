@@ -1,0 +1,25 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this stuff from being saved:</h2>
+
+      <ul>
+      <% @stuff.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cut %><br>
+    <%= f.select :cut, ['chuck', 'rib', 'brisket', 'shank', 'plate', 'short loin', 'sirloin', 'top sirloin', 'bottom sirloin', 'tenderloin', 'round', 'flank']%>
+  </div>
+  <div class="field">
+    <%= f.label :amount %><br>
+    <%= f.number_field :amount, :step => 'any' %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

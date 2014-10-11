@@ -17,11 +17,11 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.new(order_params)
+    @order = @cow.order.build(order_params)
     respond_to do |format|
       if @order.save
         UserReserve.order_reserved(user, order).deliver
-        format.html { redirect_to orders_url, notice: "Order ##{@order.id} was successfully created." }
+        format.html { redirect_to root_path, notice: "Order ##{@order.id} was successfully created." }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }
@@ -62,7 +62,7 @@ class OrdersController < ApplicationController
   end
 
   def set_cow
-    @cow = Cow.find(@order.cow_id)
+    @cow = Cow.find(params[:cow_id])
   end
 
   def order_params

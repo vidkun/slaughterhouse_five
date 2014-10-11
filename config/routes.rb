@@ -2,9 +2,11 @@ Rails.application.routes.draw do
 
   root to: 'static_pages#home'
   get '/about' => 'static_pages#about', as: :about
-  get '/order' => 'static_pages#order', as: :order
   get '/confirmation' => 'static_pages#confirmation', as: :confimation
 
+  resources :cows, only: [:index] do
+    resources :orders, except: [:show, :index]
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
