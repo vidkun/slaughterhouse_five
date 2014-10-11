@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  chuck_reserved: 9.99
+  chuck_total: 9.99
+  rib_reserved: 9.99
+  rib_total: 9.99
+  brisket_reserved: 9.99
+  brisket_total: 9.99
+  shank_reserved: 9.99
+  shank_total: 9.99
+  plate_reserved: 9.99
+  plate_total: 9.99
+  short_loin_reserved: 9.99
+  short_loin_total: 9.99
+  sirloin_reserved: 9.99
+  sirloin_total: 9.99
+  top_sirloin_reserved: 9.99
+  top_sirloin_total: 9.99
+  bottom_sirloin_reserved: 9.99
+  bottom_sirloin_total: 9.99
+  tenderloin_reserved: 9.99
+  tenderloin_total: 9.99
+  round_reserved: 9.99
+  round_total: 9.99
+  flank_reserved: 9.99
+  flank_total: 9.99
+  tongue_reserved: 9.99
+  tongue_total: 9.99
+
+two:
+  chuck_reserved: 9.99
+  chuck_total: 9.99
+  rib_reserved: 9.99
+  rib_total: 9.99
+  brisket_reserved: 9.99
+  brisket_total: 9.99
+  shank_reserved: 9.99
+  shank_total: 9.99
+  plate_reserved: 9.99
+  plate_total: 9.99
+  short_loin_reserved: 9.99
+  short_loin_total: 9.99
+  sirloin_reserved: 9.99
+  sirloin_total: 9.99
+  top_sirloin_reserved: 9.99
+  top_sirloin_total: 9.99
+  bottom_sirloin_reserved: 9.99
+  bottom_sirloin_total: 9.99
+  tenderloin_reserved: 9.99
+  tenderloin_total: 9.99
+  round_reserved: 9.99
+  round_total: 9.99
+  flank_reserved: 9.99
+  flank_total: 9.99
+  tongue_reserved: 9.99
+  tongue_total: 9.99
