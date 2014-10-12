@@ -18,4 +18,9 @@ class Cow < ActiveRecord::Base
                            numericality: true
   validates :tag_number, presence: true,
                          uniqueness: { case_sensitive: false }
+
+  def increase_reserved_amount(cut, amount)
+    self.send("#{cut}_reserved=", "#{cut}_reserved".to_i + amount)
+    self.save!
+  end
 end
