@@ -11,8 +11,7 @@ class Order < ActiveRecord::Base
   private
 
   def amount_left
-    cow = self.cow
     remaining = cow.send("#{cut}_total".to_sym) - cow.send("#{cut}_reserved".to_sym)
-    errors.add(:amount, 'not enough of this cut remaining') if amount > remaining
+    errors.add(:amount, 'not enough of this cut remaining') if amount.to_i > remaining
   end
 end
