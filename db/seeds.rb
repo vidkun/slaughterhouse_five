@@ -33,5 +33,5 @@ Cow.create(
             tongue_reserved: 0,
             tongue_total: 50,
             total_weight: 650,
-            tag_number: 'fuck this cow'
+            tag_number: '123'
 )
